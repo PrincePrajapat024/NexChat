@@ -7,13 +7,46 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>🚀 NexChat</h1>
-    <p>Real-Time Chat Application</p>
+<div class="background"></div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+<div class="container">
+
+    <div class="logo">
+        💬
+    </div>
+
+    <h1>NexChat</h1>
+
+    <p class="tagline">
+        Connect. Chat. Collaborate.
+    </p>
+
+    <form class="join-form">
+
+        <input
+            type="text"
+            placeholder="Enter your name"
+            id="username"
+            autocomplete="off"
+        >
+
+        <button type="submit">
+            🚀 Join Conversation
+        </button>
+
+    </form>
+
+    <p class="footer">
+        Made with ❤️ using Socket.IO
+    </p>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

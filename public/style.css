@@ -1,7 +1,243 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background:#111827;
-    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #0f172a
+    );
+
+    overflow:hidden;
+}
+
+.background{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at top left,#3b82f630,transparent 40%),
+    radial-gradient(circle at bottom right,#8b5cf630,transparent 40%);
+
+    z-index:-1;
+}
+
+.container{
+
+    width:420px;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.35);
+
     text-align:center;
-    margin-top:100px;
+}
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+    font-size:70px;
+    margin-bottom:15px;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+h1{
+
+    color:white;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+}
+
+.tagline{
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+    margin-bottom:35px;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.join-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.join-form input{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    outline:none;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.join-form input::placeholder{
+
+    color:#94a3b8;
+}
+
+.join-form input:focus{
+
+    border-color:#3b82f6;
+
+    box-shadow:0 0 20px rgba(59,130,246,.35);
+}
+/* ===========================
+   Button
+=========================== */
+
+.join-form button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+
+    transition:all .3s ease;
+
+    box-shadow:0 10px 25px rgba(59,130,246,.35);
+}
+
+.join-form button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(59,130,246,.45);
+}
+
+.join-form button:active{
+
+    transform:scale(.98);
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.footer{
+
+    margin-top:30px;
+
+    font-size:13px;
+
+    color:#94a3b8;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+.container{
+
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
 }
