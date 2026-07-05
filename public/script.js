@@ -8,6 +8,12 @@ const errorMessage = document.getElementById("error-message");
 
 const joinButton = document.getElementById("join-btn");
 
+const loginContainer = document.querySelector(".container");
+
+const chatContainer = document.querySelector(".chat-container");
+
+const welcomeMessage = document.getElementById("welcome-message");
+
 // Join Button Click Event
 joinButton.addEventListener("click", function (event) {
 
@@ -27,5 +33,12 @@ joinButton.addEventListener("click", function (event) {
 
     // Send username to server
     socket.emit("join-user", username);
+
+    
+    welcomeMessage.textContent = `Welcome ${username} 👋`;
+
+    loginContainer.classList.add("hidden");
+
+    chatContainer.classList.remove("hidden");
 
 });
