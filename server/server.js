@@ -14,6 +14,23 @@ app.get("/", (req, res) => {
 });
 
 const PORT = 3000;
+io.on("connection", (socket) => {
+
+    console.log("A user connected");
+
+    socket.on("join-user", (username) => {
+
+        console.log(`${username} joined NexChat`);
+
+    });
+
+    socket.on("disconnect", () => {
+
+        console.log("User disconnected");
+
+    });
+
+});
 
 server.listen(PORT, () => {
     console.log(`🚀 NexChat Server Running on http://localhost:${PORT}`);

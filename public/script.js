@@ -18,5 +18,14 @@ joinButton.addEventListener("click", function (event) {
     const username = usernameInput.value.trim();
 
     console.log(username);
+    if (username === "") {
+    errorMessage.textContent = "Please enter your name.";
+    return;
+    }
+
+    errorMessage.textContent = "";
+
+    // Send username to server
+    socket.emit("join-user", username);
 
 });
